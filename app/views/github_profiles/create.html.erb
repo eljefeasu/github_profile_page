@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=1020">
     <meta content="origin-when-cross-origin" name="referrer" />
 
-    <title>eljefeasu (Jefferson Neel)</title>
+    <title><%= "#{@username}" %> (<%="#{@user.name_of_user}"%>)</title>
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
     <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -33,8 +33,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
     <meta property="fb:app_id" content="1401488693436528">
 
-      <meta content="https://avatars0.githubusercontent.com/u/11945078?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="eljefeasu (Jefferson Neel)" name="twitter:title" /><meta content="eljefeasu has 10 repositories written in Ruby, CoffeeScript, and CSS. Follow their code on GitHub." name="twitter:description" />
-      <meta content="https://avatars0.githubusercontent.com/u/11945078?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="profile" property="og:type" /><meta content="eljefeasu (Jefferson Neel)" property="og:title" /><meta content="https://github.com/eljefeasu" property="og:url" /><meta content="eljefeasu has 10 repositories written in Ruby, CoffeeScript, and CSS. Follow their code on GitHub." property="og:description" /><meta content="eljefeasu" property="profile:username" />
+      <meta content="https://avatars0.githubusercontent.com/u/11945078?v=3&amp;s=400" name="twitter:image:src" /><meta content="@github" name="twitter:site" /><meta content="summary" name="twitter:card" /><meta content="<%= @username %> (<%=@user.name_of_user%>)" name="twitter:title" /><meta content="<%=@username%> has 10 repositories written in Ruby, CoffeeScript, and CSS. Follow their code on GitHub." name="twitter:description" />
+      <meta content="https://avatars0.githubusercontent.com/u/11945078?v=3&amp;s=400" property="og:image" /><meta content="GitHub" property="og:site_name" /><meta content="profile" property="og:type" /><meta content="<%=@username%> (<%=@user.name_of_user%>)" property="og:title" /><meta content="https://github.com/<%=@username%>" property="og:url" /><meta content="<%=@username%> has 10 repositories written in Ruby, CoffeeScript, and CSS. Follow their code on GitHub." property="og:description" /><meta content="<%=@username%>" property="profile:username" />
       <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
     <meta name="browser-errors-url" content="https://api.github.com/_private/browser/errors">
     <link rel="assets" href="https://assets-cdn.github.com/">
@@ -44,13 +44,13 @@
 
     <meta name="msapplication-TileImage" content="/windows-tile.png">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="selected-link" value="/eljefeasu" data-pjax-transient>
+    <meta name="selected-link" value="/<%=@username%>" data-pjax-transient>
 
     <meta name="google-site-verification" content="KT5gs8h0wvaagLKAVWq8bbeNwnZZK1r1XQysX3xurLU">
 <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-analytics" content="UA-3769691-2">
 
-<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="4A25CAA1:1275:BDEC86D:56D61638" name="octolytics-dimension-request_id" /><meta content="11945078" name="octolytics-actor-id" /><meta content="eljefeasu" name="octolytics-actor-login" /><meta content="9dcb4d1d0580258e7960970e3bbc9d2ead89a16e5b9d23084fed7d78324f90fe" name="octolytics-actor-hash" />
+<meta content="collector.githubapp.com" name="octolytics-host" /><meta content="github" name="octolytics-app-id" /><meta content="4A25CAA1:1275:BDEC86D:56D61638" name="octolytics-dimension-request_id" /><meta content="11945078" name="octolytics-actor-id" /><meta content="<%=@username%>" name="octolytics-actor-login" /><meta content="9dcb4d1d0580258e7960970e3bbc9d2ead89a16e5b9d23084fed7d78324f90fe" name="octolytics-actor-hash" />
 <meta content="/&lt;user-name&gt;" data-pjax-transient="true" name="analytics-location" />
 
 
@@ -60,7 +60,7 @@
 
 
         <meta name="hostname" content="github.com">
-    <meta name="user-login" content="eljefeasu">
+    <meta name="user-login" content="<%=@username%>">
 
         <meta name="expected-hostname" content="github.com">
       <meta name="js-proxy-site-detection-payload" content="NzRiZDYyYTQ2NDFhYzM2NjQ5ZDc1ODdlYzliODIxYzZjMzgyMjJkZTI2YThlNWNmNDY3ODBiZjkzNzQ1ZjFiMnx7InJlbW90ZV9hZGRyZXNzIjoiNzQuMzcuMjAyLjE2MSIsInJlcXVlc3RfaWQiOiI0QTI1Q0FBMToxMjc1OkJERUM4NkQ6NTZENjE2MzgifQ==">
@@ -73,9 +73,9 @@
     <meta http-equiv="x-pjax-version" content="fa494430db9ad47f0b8e8aede72114c3">
 
 
-        <link href="/eljefeasu.atom" rel="alternate" title="atom" type="application/atom+xml">
-  <meta name="description" content="eljefeasu has 10 repositories written in Ruby, CoffeeScript, and CSS. Follow their code on GitHub.">
-  <meta content="11945078" name="octolytics-dimension-user_id" /><meta content="eljefeasu" name="octolytics-dimension-user_login" />
+        <link href="/<%=@username%>.atom" rel="alternate" title="atom" type="application/atom+xml">
+  <meta name="description" content="<%=@username%> has 10 repositories written in Ruby, CoffeeScript, and CSS. Follow their code on GitHub.">
+  <meta content="11945078" name="octolytics-dimension-user_id" /><meta content="<%=@username%>" name="octolytics-dimension-user_login" />
 
 
   </head>
@@ -134,7 +134,7 @@
 <ul class="header-nav user-nav right" id="user-links">
   <li class="header-nav-item">
       <span class="js-socket-channel js-updatable-content"
-        data-channel="notification-changed:eljefeasu"
+        data-channel="notification-changed:<%=@username%>"
         data-url="/notifications/header">
       <a href="/notifications" aria-label="You have unread notifications" class="header-nav-link notification-indicator tooltipped tooltipped-s" data-ga-click="Header, go to notifications, icon:unread" data-hotkey="g n">
           <span class="mail-status unread"></span>
@@ -171,24 +171,24 @@
   </li>
 
   <li class="header-nav-item dropdown js-menu-container">
-    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/eljefeasu"
+    <a class="header-nav-link name tooltipped tooltipped-sw js-menu-target" href="/<%=@username%>"
        aria-label="View profile and more"
        data-ga-click="Header, show menu, icon:avatar">
-      <img alt="@eljefeasu" class="avatar" height="20" src="https://avatars0.githubusercontent.com/u/11945078?v=3&amp;s=40" width="20" />
+      <img alt="@<%=@username%>" class="avatar" height="20" src="https://avatars0.githubusercontent.com/u/11945078?v=3&amp;s=40" width="20" />
       <span class="dropdown-caret"></span>
     </a>
 
     <div class="dropdown-menu-content js-menu-content">
       <div class="dropdown-menu  dropdown-menu-sw">
         <div class=" dropdown-header header-nav-current-user css-truncate">
-            Signed in as <strong class="css-truncate-target">eljefeasu</strong>
+            Signed in as <strong class="css-truncate-target"><%=@username%></strong>
 
         </div>
 
 
         <div class="dropdown-divider"></div>
 
-          <a class="dropdown-item" href="/eljefeasu" data-ga-click="Header, go to profile, text:your profile">
+          <a class="dropdown-item" href="/<%=@username%>" data-ga-click="Header, go to profile, text:your profile">
             Your profile
           </a>
         <a class="dropdown-item" href="/stars" data-ga-click="Header, go to starred repos, text:your stars">
@@ -245,11 +245,11 @@
 <div class="page-content container">
   <div class="columns profilecols">
     <div class="column one-fourth vcard" itemscope itemtype="http://schema.org/Person">
-        <a href="/account" aria-label="Change your avatar" class="vcard-avatar d-block tooltipped tooltipped-s"><img alt="" class="avatar rounded-2" height="230" src="https://avatars2.githubusercontent.com/u/11945078?v=3&amp;s=460" width="230" /></a>
+        <a href="/account" aria-label="Change your avatar" class="vcard-avatar d-block tooltipped tooltipped-s"><img alt="" class="avatar rounded-2" height="230" src="<%=@user.owner_avatar%>&amp;s=460" width="230" /></a>
 
       <h1 class="vcard-names my-3">
-  <div class="vcard-fullname" itemprop="name">Jefferson Neel</div>
-  <div class="vcard-username" itemprop="additionalName">eljefeasu</div>
+  <div class="vcard-fullname" itemprop="name"><%="#{@user.name_of_user}"%></div>
+  <div class="vcard-username" itemprop="additionalName"><%=@username%></div>
 </h1>
 
 
@@ -264,7 +264,7 @@
 
 
       <div class="vcard-stats border-top border-bottom border-gray-light mb-3 py-3">
-        <a class="vcard-stat" href="/eljefeasu/followers">
+        <a class="vcard-stat" href="/<%=@username%>/followers">
           <strong class="vcard-stat-count d-block">12</strong>
           <span class="text-muted">Followers</span>
         </a>
@@ -272,7 +272,7 @@
           <strong class="vcard-stat-count d-block">0</strong>
           <span class="text-muted">Starred</span>
         </a>
-        <a class="vcard-stat" href="/eljefeasu/following">
+        <a class="vcard-stat" href="/<%=@username%>/following">
           <strong class="vcard-stat-count d-block">19</strong>
           <span class="text-muted">Following</span>
         </a>
@@ -296,21 +296,21 @@
           </div>
 
         <nav class="tabnav-tabs" data-pjax role="navigation">
-          <a href="/eljefeasu"
+          <a href="/<%=@username%>"
             class="tabnav-tab "
             aria-selected="false"
             role="tab">
             <svg aria-hidden="true" class="octicon octicon-diff-added" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M13 1H1C0.45 1 0 1.45 0 2v12c0 0.55 0.45 1 1 1h12c0.55 0 1-0.45 1-1V2c0-0.55-0.45-1-1-1z m0 13H1V2h12v12zM6 9H3V7h3V4h2v3h3v2H8v3H6V9z"></path></svg>
             Contributions
           </a>
-          <a href="/eljefeasu?tab=repositories"
+          <a href="/<%=@username%>?tab=repositories"
             class="tabnav-tab selected"
             aria-selected="true"
             role="tab">
             <svg aria-hidden="true" class="octicon octicon-repo" height="16" role="img" version="1.1" viewBox="0 0 12 16" width="12"><path d="M4 9h-1v-1h1v1z m0-3h-1v1h1v-1z m0-2h-1v1h1v-1z m0-2h-1v1h1v-1z m8-1v12c0 0.55-0.45 1-1 1H6v2l-1.5-1.5-1.5 1.5V14H1c-0.55 0-1-0.45-1-1V1C0 0.45 0.45 0 1 0h10c0.55 0 1 0.45 1 1z m-1 10H1v2h2v-1h3v1h5V11z m0-10H2v9h9V1z"></path></svg>
             Repositories
           </a>
-          <a href="/eljefeasu?tab=activity"
+          <a href="/<%=@username%>?tab=activity"
             class="tabnav-tab "
             aria-selected="false"
             role="tab">
@@ -339,7 +339,7 @@
     </ul>
 
     <!-- </textarea> --><!-- '"` --><form accept-charset="UTF-8" action="/search" class="d-inline" method="get" role="search"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
-      <input type="hidden" name="user" value="eljefeasu">
+      <input type="hidden" name="user" value="<%=@username%>">
       <input type="text" id="your-repos-filter" name="q" class="filter_input js-filterable-field" placeholder="Find a repository&hellip;" tabindex="2" aria-label="Filter your repositories by name">
       <input type="submit" value="Search" class="btn">
 </form>  </div>
@@ -347,346 +347,71 @@
     <ul class="repo-list js-repo-list" data-filterable-for="your-repos-filter" data-filterable-type="substring">
 
 
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/github_profile_page/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/github_profile_page/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/github_profile_page" itemprop="name codeRepository">
-        github_profile_page</a>
-    </h3>
 
 
 
 
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-03-01T21:30:33Z" is="relative-time">Mar 1, 2016</time>
-    </p>
 
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/github_profile_page/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
+
+
+<% @user.project_name.each_with_index do |u, i| %>
+
+<div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
+  <div class="repo-list-stats">
+      <span itemprop="programmingLanguage">
+        Ruby
+      </span>
+    <a class="repo-list-stat-item tooltipped tooltipped-s" href="/<%=@username%>/<%=@user.project_name[i]%>/stargazers" aria-label="Stargazers">
+      <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
+      0
+    </a>
+    <a class="repo-list-stat-item tooltipped tooltipped-s" href="/<%=@username%>/<%=@user.project_name[i]%>/network"  aria-label="Forks">
+      <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
+      0
+    </a>
   </div>
 
-
-
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/voter_api/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/voter_api/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/voter_api" itemprop="name codeRepository">
-        voter_api</a>
-    </h3>
+  <h3 class="repo-list-name">
+    <a href="/<%=@username%>/<%=@user.project_name[i]%>" itemprop="name codeRepository">
+      <%="#{@user.project_name[i]}"%></a>
+  </h3>
 
 
 
 
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-24T23:00:10Z" is="relative-time">Feb 24, 2016</time>
-    </p>
 
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/voter_api/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
+
+  <p class="repo-list-meta">
+      Updated <time datetime="2016-03-01T21:30:33Z" is="relative-time">Mar 1, 2016</time>
+  </p>
+
+  <div class="participation-graph">
+    <poll-include-fragment src="/<%=@username%>/github_profile_page/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
   </div>
+</div>
 
+<% end %>
 
 
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/weather_report/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/weather_report/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
 
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/weather_report" itemprop="name codeRepository">
-        weather_report</a>
-    </h3>
 
 
 
 
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-23T01:24:16Z" is="relative-time">Feb 23, 2016</time>
-    </p>
 
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/weather_report/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
 
 
 
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/employee_reviews_with_database/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/employee_reviews_with_database/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
 
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/employee_reviews_with_database" itemprop="name codeRepository">
-        employee_reviews_with_database</a>
-    </h3>
 
 
 
 
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-18T01:08:07Z" is="relative-time">Feb 18, 2016</time>
-    </p>
 
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/employee_reviews_with_database/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
 
 
 
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/time_entry_data_structure/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/time_entry_data_structure/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
 
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/time_entry_data_structure" itemprop="name codeRepository">
-        time_entry_data_structure</a>
-    </h3>
-
-
-
-
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-16T14:29:30Z" is="relative-time">Feb 16, 2016</time>
-    </p>
-
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/time_entry_data_structure/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
-
-
-
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/employee_reviews/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/employee_reviews/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/employee_reviews" itemprop="name codeRepository">
-        employee_reviews</a>
-    </h3>
-
-
-
-
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-14T21:57:54Z" is="relative-time">Feb 14, 2016</time>
-    </p>
-
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/employee_reviews/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
-
-
-
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/currency_converter/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/currency_converter/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/currency_converter" itemprop="name codeRepository">
-        currency_converter</a>
-    </h3>
-
-
-
-
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-08T13:34:42Z" is="relative-time">Feb 8, 2016</time>
-    </p>
-
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/currency_converter/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
-
-
-
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/blackjack_advisor/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/blackjack_advisor/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/blackjack_advisor" itemprop="name codeRepository">
-        blackjack_advisor</a>
-    </h3>
-
-
-
-
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-04T01:03:39Z" is="relative-time">Feb 4, 2016</time>
-    </p>
-
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/blackjack_advisor/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
-
-
-
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/guessing_game/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/guessing_game/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/guessing_game" itemprop="name codeRepository">
-        guessing_game</a>
-    </h3>
-
-
-
-
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-02-03T12:06:05Z" is="relative-time">Feb 3, 2016</time>
-    </p>
-
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/guessing_game/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
-
-
-
-  <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
-    <div class="repo-list-stats">
-        <span itemprop="programmingLanguage">
-          Ruby
-        </span>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/even_or_odd/stargazers" aria-label="Stargazers">
-        <svg aria-hidden="true" class="octicon octicon-star" height="16" role="img" version="1.1" viewBox="0 0 14 16" width="14"><path d="M14 6l-4.9-0.64L7 1 4.9 5.36 0 6l3.6 3.26L2.67 14l4.33-2.33 4.33 2.33L10.4 9.26 14 6z"></path></svg>
-        0
-      </a>
-      <a class="repo-list-stat-item tooltipped tooltipped-s" href="/eljefeasu/even_or_odd/network"  aria-label="Forks">
-        <svg aria-hidden="true" class="octicon octicon-git-branch" height="16" role="img" version="1.1" viewBox="0 0 10 16" width="10"><path d="M10 5c0-1.11-0.89-2-2-2s-2 0.89-2 2c0 0.73 0.41 1.38 1 1.72v0.3c-0.02 0.52-0.23 0.98-0.63 1.38s-0.86 0.61-1.38 0.63c-0.83 0.02-1.48 0.16-2 0.45V4.72c0.59-0.34 1-0.98 1-1.72 0-1.11-0.89-2-2-2S0 1.89 0 3c0 0.73 0.41 1.38 1 1.72v6.56C0.41 11.63 0 12.27 0 13c0 1.11 0.89 2 2 2s2-0.89 2-2c0-0.53-0.2-1-0.53-1.36 0.09-0.06 0.48-0.41 0.59-0.47 0.25-0.11 0.56-0.17 0.94-0.17 1.05-0.05 1.95-0.45 2.75-1.25s1.2-1.98 1.25-3.02h-0.02c0.61-0.36 1.02-1 1.02-1.73zM2 1.8c0.66 0 1.2 0.55 1.2 1.2s-0.55 1.2-1.2 1.2-1.2-0.55-1.2-1.2 0.55-1.2 1.2-1.2z m0 12.41c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z m6-8c-0.66 0-1.2-0.55-1.2-1.2s0.55-1.2 1.2-1.2 1.2 0.55 1.2 1.2-0.55 1.2-1.2 1.2z"></path></svg>
-        0
-      </a>
-    </div>
-
-    <h3 class="repo-list-name">
-      <a href="/eljefeasu/even_or_odd" itemprop="name codeRepository">
-        even_or_odd</a>
-    </h3>
-
-
-
-      <p class="repo-list-description" itemprop="description">
-        Simple Program asking for user input and tells whether integer is even or odd
-      </p>
-
-    <p class="repo-list-meta">
-        Updated <time datetime="2016-01-17T16:34:36Z" is="relative-time">Jan 17, 2016</time>
-    </p>
-
-    <div class="participation-graph">
-      <poll-include-fragment src="/eljefeasu/even_or_odd/graphs/participation?h=100&amp;w=640"></poll-include-fragment>
-    </div>
-  </div>
 
 </ul>
 
