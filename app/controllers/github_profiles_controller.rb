@@ -2,6 +2,6 @@ class GithubProfilesController < ApplicationController
   def index
   end
 
-  def results
+  def create
   end
 end
