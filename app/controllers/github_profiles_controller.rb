@@ -3,7 +3,7 @@ class GithubProfilesController < ApplicationController
   end
 
   def create
-    user = GitHub.new(params[:username])
-    render json: user.results
+    @username = params[:username]
+    @user = Github.new(@username)
   end
 end
