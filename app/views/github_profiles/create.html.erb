@@ -354,7 +354,7 @@
 
 
 
-<% @user.project_name.each_with_index do |u, i| %>
+<% @user.results.each_with_index do |u, i| %>
 
 <div class="repo-list-item public source" itemprop="owns" itemscope itemtype="http://schema.org/Code">
   <div class="repo-list-stats">
@@ -382,7 +382,7 @@
 
 
   <p class="repo-list-meta">
-      Updated <time datetime="2016-03-01T21:30:33Z" is="relative-time">Mar 1, 2016</time>
+      Updated <time datetime="2016-03-01T21:30:33Z" is="relative-time"><%="#{@user.updated_at[i]}"%>/time>
   </p>
 
   <div class="participation-graph">

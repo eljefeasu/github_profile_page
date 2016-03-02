@@ -1,4 +1,5 @@
 require 'httparty'
+require 'date'
 
 class Github
   attr_reader :results
@@ -17,7 +18,7 @@ class Github
 
   def description
     @description = []
-    @results.map { |r| @description << r["name"] }
+    @results.map { |r| @description << r["description"] }
     return @description
   end
 
@@ -25,6 +26,12 @@ class Github
     @owner_avatar = []
     @results.map { |r| @owner_avatar<< r["owner"]["avatar_url"]}
     return @owner_avatar.first
+  end
+
+  def updated_at
+    @updated_at = []
+    @results.map { |r| @updated_at << r["updated_at"]}
+    return @updated_at
   end
 
   def name_of_user
